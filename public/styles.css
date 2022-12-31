@@ -1,0 +1,210 @@
+*
+{
+    box-sizing: border-box;
+}
+
+.menu-cont
+{
+    width:3rem;
+    height:3.5rem;
+    background-color: #f1f2f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    position: absolute;
+    top:2rem;
+    left:2rem;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+.menu-cont:hover{
+
+    cursor: pointer;
+}
+
+.tools-cont
+{
+    width:45rem;
+    height:4.5rem;
+    background-color: #f1f2f6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top:1.5rem;
+    left:25rem;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+
+}
+
+.scale-tools
+{
+    animation-name: scale-tools;
+    animation-duration: 1s;
+}
+@keyframes scale-tools
+{
+    0%{
+        transform: scale(0.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.tools-cont img{
+    width:4rem;
+}
+
+.tools-cont img:hover
+{
+    cursor: pointer;
+}
+
+.pencil-tool-cont
+{
+    width: 5rem;
+    height:4rem;
+    padding:0 0.5rem 0 0.5rem;
+    position: absolute;
+    top:7rem;
+    left:26rem;
+    background-color: #f1f2f6;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    border-radius: 10px;;
+    display: none;
+}
+
+.pencil-tool-cont input
+{
+    width:90%;
+    height:1.5rem;
+    margin: 0%;
+}
+.pencil-tool-cont input:hover
+{
+    cursor: pointer;
+}
+.pencil-color-cont
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:2.3rem;
+}
+.pencil-color
+{
+    width:1rem;
+    height:1rem;
+    border-radius: 50%;
+}
+.pencil-color:hover{
+    cursor: pointer;
+}
+
+.black
+{
+    background-color: black;
+}
+.blue
+{
+    background-color: blue;
+}
+.red
+{
+    background-color: red;
+}
+
+.eraser-tool-cont
+{
+    width: 5rem;
+    height:2rem;
+    padding:0 0.5rem 0 0.5rem;
+    position: absolute;
+    top:7rem;
+    left:32rem;
+    background-color: #f1f2f6;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    display: none;
+}
+
+.eraser-tool-cont input
+{
+    width:90%;
+    height:1.5rem;
+    margin: 0%;
+}
+.eraser-tool-cont input:hover
+{
+    cursor: pointer;
+}
+
+
+
+.sticky-cont
+{
+    width:15rem;
+    height:15rem;
+    position: absolute;
+   
+    top:15rem;
+    left:15rem;
+}
+
+.sticky-cont .header-cont
+{
+    height:2rem;
+    display: flex;
+    justify-content: right;
+    background-color: #f1f2f6;
+    align-items: center;
+}
+
+.header-cont >*
+{
+    width:1.5rem;
+    height:1.5rem;
+    margin:0.3rem;
+    border-radius: 50%;
+}
+
+.header-cont >*:hover
+{
+    cursor: pointer;
+}
+
+.header-cont .minimize
+{
+    background-color:#2ed573;
+}
+
+.header-cont .remove
+{
+    background-color:#ff4757;
+}
+
+.note-cont
+{
+    height: 13rem;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    display: block;
+}
+
+.note-cont textarea
+{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.note-cont img
+{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+}

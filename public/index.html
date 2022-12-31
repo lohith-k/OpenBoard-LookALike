@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>OpenBoard Look-Alike</title>
+</head>
+<body>
+    <div class="menu-cont">
+        <i class="fa-solid fa-close"></i>
+    </div>
+
+    <div class="tools-cont scale-tools">
+            <img class="pencil" src="images/pencil.png" />
+            <img class="eraser" src="images/erase.png" />
+            <img class="download" src="images/download.png" />
+            <img class="upload" src="images/upload.png" />
+            <img class="notepad" src="images/notepad.png" />
+            <img class="undo" src="images/undo.png" />
+            <img class="redo" src="images/redo.png" />
+    </div>
+
+    <div class="pencil-tool-cont">
+        <input type="range" max="10" min="2" value="4" />
+        <div class="pencil-color-cont">
+            <div class="black pencil-color">
+            </div>
+            <div class="red pencil-color">
+            </div>
+            <div class="blue pencil-color">
+            </div>
+        </div>
+    </div>
+    <div class="eraser-tool-cont">
+        <input type="range" max="10" min="2" />
+    </div>
+
+   <canvas></canvas>
+   <script src="https://cdn.socket.io/4.5.4/socket.io.min.js" integrity="sha384-/KNQL8Nu5gCHLqwqfQjA689Hhoqgi2S84SNUxC3roTe4EhJ9AfLkp8QiQcU8AMzI" crossorigin="anonymous"></script>
+   <script>
+    let socket=io.connect("http://localhost:3000/");
+    </script>
+   <script src="script.js"></script>
+   <script src="canvas.js"></script>
+</body>
+</html>
