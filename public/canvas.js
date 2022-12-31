@@ -14,7 +14,7 @@ let undoredotracker=[];
 let track=0;
 let mouseDown=false;
 let erasercolor="white";
-let pencolor=pencolorsel.value;
+let pencolor="black";
 let penwidth=penwidthel.value;
 let eraserwidth=eraserwidthel.value;
 
@@ -45,7 +45,9 @@ canvas.addEventListener("mousemove",(e)=>
     {
         let data={
             xvalue:e.clientX,
-            yvalue:e.clientY
+            yvalue:e.clientY,
+            width:eraserflag ? eraserwidth : penwidth,
+            color:eraserflag ?erasercolor:pencolor
         }
         socket.emit("drawpath",data);
     }
@@ -53,6 +55,8 @@ canvas.addEventListener("mousemove",(e)=>
 
 function drawpath(data)
 {
+    tool.strokeStyle = data.color;
+    tool.lineWidth = data.width;
     tool.lineTo(data.xvalue, data.yvalue);
     tool.stroke();
 }
@@ -106,14 +110,14 @@ pencolorsel.forEach((eachpenel)=>
     eachpenel.addEventListener("click",(e)=>
     {
         pencolor=eachpenel.classList[0];
-        tool.strokeStyle=eachpenel.classList[0];
+        tool.strokeStyle=pencolor;
     })
 })
 
 penwidthel.addEventListener("change",()=>
 {
     penwidth=penwidthel.value;
-    tool.lineWidth=penwidthel.value;
+    tool.lineWidth=penwidth;
 })
 
 eraserwidthel.addEventListener("change",()=>
